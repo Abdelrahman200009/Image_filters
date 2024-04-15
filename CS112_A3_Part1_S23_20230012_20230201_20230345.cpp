@@ -15,7 +15,7 @@ Mohammed essam : Invert image
 
 Ahmed and Abdelrahman did the menu
 
- github link ""
+ GitHub link: https://github.com/Abdelrahman200009/Image_filters/tree/main
  */
 
 #include "Image_Class.h"
@@ -113,66 +113,51 @@ void menu() {
                     return;
                 case 1:
                     greyScale(userImage);
-                    cout << "Applied grayscale filter." << nl;
                     break;
                 case 2:
                     Black_and_white(userImage);
-                    cout << "Applied black and white filter." << nl;
                     break;
                 case 3:
                     Invert_Image(userImage);
-                    cout << "Inverted image colors." << nl;
                     break;
                 case 4:
                     Merge_Images(userImage);
-                    cout << "Merged images." << nl;
                     break;
                 case 5:
                     Flip(userImage);
-                    cout << "Flipped image." << nl;
                     break;
                 case 6:
                     rotate(userImage);
-                    cout << "Rotated image." << nl;
                     break;
                 case 7:
                     Darken_lighten(userImage);
-                    cout << "Adjusted brightness." << nl;
                     break;
                 case 8:
                     crop_images(userImage);
                     break;
                 case 9:
                     frame(userImage);
-                    cout << "Added frame to image." << nl;
                     break;
                 case 10:
                     detect_edges(userImage);
-                    cout << "Detected edges." << nl;
                     break;
                 case 11:
                     resize(userImage);
-                    cout << "Resized image." << nl;
                     break;
                 case 12:
                     blur(userImage);
-                    cout << "Blurred image." << nl;
                     break;
                 case 13:
                     the_land_of_wano(userImage);
-                    cout << "Applied custom filter." << nl;
                     break;
                 case 14:
                     luffy_look_purple(userImage);
-                    cout << "Applied Luffy look (purple) effect." << nl;
                     break;
                 case 15:
                     skew_image(userImage);
-                    cout << "Skewed image." << nl;
                     break;
                 case 16:
                     adding_two_picture_together(userImage);
-                    cout << "Added two images together." << nl;
                     break;
                 default:
                     cout << "Invalid choice. Please try again." << nl;
@@ -231,6 +216,7 @@ void greyScale(Image& user_img)
         }
     }
     promptSaveImage(user_img);
+    cout << "Applied grayscale filter." << nl;
 }
 
 // B&W
@@ -278,6 +264,7 @@ void Black_and_white(Image& user_img)
         }
     }
     promptSaveImage(user_img);
+    cout << "Applied black and white filter." << nl;
 }
 
 // Invert
@@ -300,6 +287,7 @@ void Invert_Image(Image& user_img)
         }
     }
     promptSaveImage(user_img);
+    cout << "Inverted image colors." << nl;
 }
 
 // Merge
@@ -359,6 +347,7 @@ void Merge_Images(Image& user_img)
                 }
             }
             promptSaveImage(newimg);
+            cout << "Merged images." << nl;
             break;
         }
         else if (choice_dimension == 2)
@@ -383,6 +372,7 @@ void Merge_Images(Image& user_img)
                 }
             }
             promptSaveImage(newimg);
+            cout << "Merged images." << nl;
             break;
         }
         else
@@ -415,6 +405,7 @@ void Flip(Image &image )   {
             }
         }
         promptSaveImage(flipped_img);
+        cout << "Flipped image." << nl;
     }
 
     else if (choice == "2"){
@@ -428,6 +419,7 @@ void Flip(Image &image )   {
             }
         }
         promptSaveImage(flipped_img);
+        cout << "Flipped image." << nl;
     }
     else{
         cout << "Invalid choice please try again: ";
@@ -459,6 +451,7 @@ void rotate(Image &image){
             }
         }
         promptSaveImage(result);
+        cout << "Rotated image." << nl;
     }
         //rotate image by 90 degrees
     else if(choice == "1"){
@@ -474,6 +467,7 @@ void rotate(Image &image){
             }
         }
         promptSaveImage(result);
+        cout << "Rotated image." << nl;
     }
         //rotate image by 180 degrees
     else if(choice == "2"){
@@ -489,6 +483,7 @@ void rotate(Image &image){
             }
         }
         promptSaveImage(result);
+        cout << "Rotated image." << nl;
     }
     else cout << "Invalid choice Please try again :";
 }
@@ -514,6 +509,7 @@ void Darken_lighten(Image &image){
         }
     }
     promptSaveImage(image);
+    cout << "Adjusted brightness." << nl;
 }
 
 // Crop
@@ -633,6 +629,7 @@ void frame(Image& user_img) {
     }
 
     promptSaveImage(image_new);
+    cout << "Added frame to image." << nl;
 }
 
 // Detect Image Edges
@@ -675,6 +672,7 @@ void detect_edges(Image& user_img){
         }
     }
     promptSaveImage(img2);
+    cout << "Detected edges." << nl;
 
 }
 
@@ -701,6 +699,7 @@ void resize(Image &image){
         }
     }
     promptSaveImage(result);
+    cout << "Resized image." << nl;
 }
 
 // Blur
@@ -749,6 +748,7 @@ void blur(Image &image) {
         }
     }
     promptSaveImage(result);
+    cout << "Blurred image." << nl;
 }
 
 // Land of Wano
@@ -771,6 +771,7 @@ void the_land_of_wano(Image& user_img){
         }
     }
     promptSaveImage(newimg);
+    cout << "Applied land of Wano filter." << nl;
 }
 
 // Purple
@@ -793,6 +794,7 @@ void luffy_look_purple(Image& user_img){
         }
     }
     promptSaveImage(newimg);
+    cout << "Applied Luffy look (purple) effect." << nl;
 }
 
 // Skew
@@ -833,6 +835,7 @@ void skew_image(Image& user_img){
         }
     }
     promptSaveImage(newimg);
+    cout << "Skewed image." << nl;
 }
 
 // Add Two Images
@@ -892,4 +895,5 @@ void adding_two_picture_together(Image& user_img){
         }
     }
     promptSaveImage(newimg_horizontal);
+    cout << "Added two images together." << nl;
 }
